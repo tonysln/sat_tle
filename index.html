@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Simple satellite two-line element set parser.">
+    <meta name="author" content="Anton Slavin">
+
+    <title>Satellite TLE Parser</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h2>Satellite Two-Line Element Set Parser</h2>
+        <hr>
+    </header>
+
+    <main>
+        <div>
+            <p>
+                Insert TLE:
+            </p>
+            <textarea name="raw_tle" id="raw_tle" rows=6 required resizable=false></textarea>
+            <button type="submit" onclick="parse()" id="submit_btn">
+                Parse
+            </button>
+            <small>
+                <a target="_blank" href="https://celestrak.com/satcat/search.php">CelesTrak SATCAT</a>
+            </small>
+        </div>
+        <div id="parsed_box">
+            <p id="parsed_tle">
+                Name: <span id="name"></span><br>
+                <br>
+                Catalog Number: <span id="catnum"></span><br>
+                Classification: <span id="class"></span><br>
+                International Code: <span id="intcode"></span><br>
+                Date Vector: <span id="datev"></span><br>
+                Ballistic Coefficient: <span id="ballcoef"></span><br>
+                Mean Motion (Second Derivative): <span id="meanmotsecond"></span><br>
+                Drag Term: <span id="dragt"></span><br>
+                Ephemeris Type: <span id="ephem"></span><br>
+                Element Number: <span id="elemnum"></span><br>
+                Line 1 Checksum: <span id="chck1"></span><br>
+                <br>
+                Inclination: <span id="incl"></span><br>
+                Right Ascension of the Ascending Node: <span id="raotan"></span><br>
+                Mean Eccentricity: <span id="meanecc"></span><br>
+                Argument of Perigee: <span id="argperi"></span><br>
+                Mean Anomaly: <span id="meanano"></span><br>
+                Mean Motion: <span id="meanmot"></span><br>
+                Revolutions: <span id="revol"></span><br>
+                Line 2 Checksum: <span id="chck2"></span>
+            </p>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
