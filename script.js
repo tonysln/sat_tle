@@ -7,9 +7,12 @@ function convert_dt(msg) {
 }
 
 function parse() {
+    // Display the main result block & footer.
     document.getElementById('parsed_box').style.display = 'block';
+    document.getElementById('footer').style.display = 'block';
 
     let msg = document.getElementById('raw_tle').value.split('\n');
+    // Add an empty line if no title line is provided (so the indices stay correct).
     if (msg.length == 2) {
         msg.splice(0, 0, '');
     }
